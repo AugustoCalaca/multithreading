@@ -36,6 +36,7 @@ Felizmente, os principais sistemas operacionais modernos susportam threads. Cada
 As threads devem operar em dados diferentes, mas geralmente elas podem acessar os mesmos dados. Não é seguro permitir acesso simultâneo a esses dados ou recursos sem algum mecanismo que defina um protocolo de acesso seguro. Elas devem ser explicitamente intruídas para bloquear quando outras threads tentarem acessar os mesmos recursos.
 ### Exclusão mútua
 A exclusão mútua é o método de serializar o acesso a recursos compartilhados. Você não quer que uma thread modifique uma variável que já está sendo modificada por outra thread! Outro cenário é uma leitura suja onde o valor está sendo atualizado e outra thread lê o valor antigo. O protocolo usado é o **Mutex** que é um bloqueio que pode ser anexado virtualmente a algum recurso.
+
 Como analogia, você pode pensar no **mutex** como um cofre com apenas uma chave (no caso do mutex padrão), e o recurso é proteger o coteúdo de dentro do cofre. Apenas uma pessoa pode ter a chave no peito a qualquer momento, portanto, é a única pessoa autorizada a olhar ou modificar o conteúdo do baú no momento em que ele possui a chave.
 
 ### Tipos de Mutex
